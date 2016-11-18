@@ -1,8 +1,7 @@
 import React from 'react';
 import Spreadsheet from 'react-spreadsheet-component'
-//require('style!css!react-spreadsheet-component/styles/creativeworks.css')
-require('style!css!react-spreadsheet-component/styles/excel.css')
-require('style!css!../example.css')
+require('style-loader!css-loader!react-spreadsheet-component/styles/excel.css')
+require('style-loader!css-loader!../example.css')
 
 const initialData = {
     rows: [
@@ -51,7 +50,7 @@ var config = {
 };
 
 const sheet = () => (
-    <div class='example'>
+    <div className='example'>
         <h2>React-Spreadsheet-Component</h2>
         <div id="exampleTwo">
             <Spreadsheet initialData={initialData} config={config} cellClasses={cellClasses} />
